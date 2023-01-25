@@ -4,37 +4,99 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b21b8cbd-3dae-47a0-9d9b-b18ccea7f4df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/VoteSessionPoll.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Pauta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Votacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/VotoId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/enums/CpfStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/enums/VotoEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/VotosApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado$AssociadoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta$PautaBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Votacao$VotacaoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Votacao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/VotoId$VotoIdBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/VotoId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/enums/CpfStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/enums/VotoEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/votos.iml" afterDir="false" />
+    <list default="true" id="b21b8cbd-3dae-47a0-9d9b-b18ccea7f4df" name="Changes" comment="feat: Criação das entidades">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_2_1_214.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_2_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/AssociadoBasicoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/AssociadoCompletoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/PautaBasicoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/PautaCompletoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/VotacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/VotacaoResultadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/VotoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/enums/VotoEnumDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/votos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado$AssociadoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado$AssociadoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/votos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/votos/votos.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +106,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -77,20 +140,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "configurable.group.tools"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="VotosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.votos.VotosApplication" />
       <module name="votos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.votos.*" />
+          <option name="PATTERN" value="br.com.votos.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,6 +177,18 @@
       <option name="presentableId" value="Default" />
       <updated>1674654718530</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: Criação das entidades">
+      <created>1674668438728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674668438728</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Criação das entidades" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Criação das entidades" />
   </component>
 </project>
