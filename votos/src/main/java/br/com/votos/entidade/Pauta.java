@@ -16,12 +16,11 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@SequenceGenerator(name = "PAUTA_SEQ", sequenceName = "PAUTA_SEQ", allocationSize = 1)
 public class Pauta {
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PAUTA_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull(message = "Campo Obrigatório.")
@@ -39,5 +38,5 @@ public class Pauta {
 
     @NotNull(message = "Campo Obrigatório.")
     @Column(name = "FINALIZADA", nullable = false)
-    private boolean Finalizada;
+    private boolean finalizada;
 }

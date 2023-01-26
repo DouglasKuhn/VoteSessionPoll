@@ -26,8 +26,8 @@ public class AssociadoController {
     private AssociadoMapper associadoMapper;
 
     @PostMapping
-    public ResponseEntity<Void> criar (@RequestParam(value = "nomeAssociado") String nome,
-                                       @RequestParam(value = "cpfAssociado") String cpf) {
+    public ResponseEntity<Void> criar (@RequestParam(value = "Nome do Associado") String nome,
+                                       @RequestParam(value = "CPF do Associado") String cpf) {
         Associado associado = this.associadoService.criar(nome, cpf);
         if (associado != null) {
             return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest().queryParam("id", associado.getId().toString()).build().toUri()).build();
@@ -37,7 +37,7 @@ public class AssociadoController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Void> alterar (@PathVariable(value = "id") Long id,
+    public ResponseEntity<Void> alterar (@PathVariable(value = "ID") Long id,
                                          @Valid @RequestBody AssociadoBasicoDTO associadoBasicoDTO) {
         Associado associado = this.associadoService.alterar(id, this.associadoMapper.toAssociado(associadoBasicoDTO));
         if (associado != null) {
@@ -48,8 +48,8 @@ public class AssociadoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AssociadoCompletoDTO>> consultar (@RequestParam(value = "idAssociado") Optional<String> id,
-                                                                 @RequestParam(value = "nomeAssociado") Optional<String> nome) {
+    public ResponseEntity<List<AssociadoCompletoDTO>> consultar (@RequestParam(value = "ID do Associado") Optional<String> id,
+                                                                 @RequestParam(value = "Nome do Associado") Optional<String> nome) {
         List<Associado> associados = this.associadoService.consultar(id, nome);
         if (!associados.isEmpty() && associados != null) {
             return ResponseEntity.ok(this.associadoMapper.toAssociadoCompletoDtoList(associados));
@@ -59,7 +59,7 @@ public class AssociadoController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable(value = "id") Long id) {
+    public ResponseEntity<Void> excluir(@PathVariable(value = "ID") Long id) {
         associadoService.excluir(id);
         return ResponseEntity.noContent().build();
     }
