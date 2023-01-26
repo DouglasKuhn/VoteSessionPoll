@@ -15,13 +15,13 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@SequenceGenerator(name = "ASSOCIADO_SEQ", sequenceName = "ASSOCIADO_SEQ", allocationSize = 1)
+//@SequenceGenerator(name = "ASSOCIADO_SEQ", sequenceName = "ASSOCIADO_SEQ", allocationSize = 1)
 public class Associado {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ASSOCIADO_SEQ")
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ASSOCIADO_SEQ")
     private Long id;
 
     @NotNull(message = "Campo Obrigatório.")

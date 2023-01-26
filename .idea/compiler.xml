@@ -21,7 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="votos" target="17" />
+      <module name="votos" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -29,7 +29,6 @@ public class AssociadoServiceImpl implements AssociadoService{
     @Override
     public Associado criar (String nome,  String cpf) {
         Associado associado = new Associado();
-        associado.setId(1L);
         associado.setNome(nome);
         associado.setCpf(cpf);
         log.info("Associado criado: {}", associado);
@@ -61,7 +60,7 @@ public class AssociadoServiceImpl implements AssociadoService{
 
         List<Predicate> predicateList = new ArrayList<>();
         if (id.isPresent()) {
-            predicateList.add(cb.equal(associadoRoot.get("id"), id));
+            predicateList.add(cb.equal(associadoRoot.get("id"), id.get()));
         }
 
         if (nome.isPresent()) {
