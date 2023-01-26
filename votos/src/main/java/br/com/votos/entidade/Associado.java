@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 public class Associado {
 
     @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ASSOCIADO_SEQ")
     private Long id;
@@ -32,8 +33,4 @@ public class Associado {
     @NotBlank(message = "Campo Obrigatório.")
     @Column(name = "CPF", nullable = false, unique = true)
     private String cpf;
-
-    @NotNull(message = "Campo Obrigatório.")
-    @Column(name = "EXCLUIDO", nullable = false)
-    private boolean Excluido;
 }

@@ -14,6 +14,4 @@ import lombok.experimental.SuperBuilder;
 public class PautaCompletoDTO extends PautaBasicoDTO {
 
     private Long id;
-
-    private boolean excluida;
 }

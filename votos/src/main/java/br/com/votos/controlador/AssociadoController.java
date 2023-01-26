@@ -2,18 +2,66 @@ package br.com.votos.controlador;
 
 import br.com.votos.dto.AssociadoBasicoDTO;
 import br.com.votos.dto.AssociadoCompletoDTO;
+import br.com.votos.entidade.Associado;
+import br.com.votos.mapper.AssociadoMapper;
+import br.com.votos.servico.AssociadoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
-public interface AssociadoController {
+@RestController
+@RequestMapping(path = "/v1/associado", produces = MediaType.APPLICATION_JSON_VALUE)
+public class AssociadoController {
 
-    ResponseEntity<Void> criar (AssociadoBasicoDTO associadoBasicoDTO);
+    @Autowired
+    private AssociadoService associadoService;
 
-    ResponseEntity<Void> alterar (Long id, AssociadoBasicoDTO associadoBasicoDTO);
+    @Autowired
+    private AssociadoMapper associadoMapper;
 
-    ResponseEntity<List<AssociadoCompletoDTO>> consultar (Long id, String nome, Boolean excluido);
+    @PostMapping
+    public ResponseEntity<Void> criar (@RequestParam(value = "nomeAssociado") String nome,
+                                       @RequestParam(value = "cpfAssociado") String cpf) {
+        Associado associado = this.associadoService.criar(nome, cpf);
+        if (associado != null) {
+            return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest().queryParam("id", associado.getId().toString()).build().toUri()).build();
+        } else {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+    }
 
-    public ResponseEntity<Void> excluir(Long id);
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<Void> alterar (@PathVariable(value = "id") Long id,
+                                         @Valid @RequestBody AssociadoBasicoDTO associadoBasicoDTO) {
+        Associado associado = this.associadoService.alterar(id, this.associadoMapper.toAssociado(associadoBasicoDTO));
+        if (associado != null) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<List<AssociadoCompletoDTO>> consultar (@RequestParam(value = "idAssociado") Optional<String> id,
+                                                                 @RequestParam(value = "nomeAssociado") Optional<String> nome) {
+        List<Associado> associados = this.associadoService.consultar(id, nome);
+        if (!associados.isEmpty() && associados != null) {
+            return ResponseEntity.ok(this.associadoMapper.toAssociadoCompletoDtoList(associados));
+        } else {
+            return ResponseEntity.noContent().build();
+        }
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable(value = "id") Long id) {
+        associadoService.excluir(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }

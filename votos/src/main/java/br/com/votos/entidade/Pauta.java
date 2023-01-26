@@ -38,10 +38,6 @@ public class Pauta {
     private LocalDateTime dtFim;
 
     @NotNull(message = "Campo Obrigatório.")
-    @Column(name = "EXCLUIDA", nullable = false)
-    private boolean Excluida;
-
-    @NotNull(message = "Campo Obrigatório.")
     @Column(name = "FINALIZADA", nullable = false)
     private boolean Finalizada;
 }

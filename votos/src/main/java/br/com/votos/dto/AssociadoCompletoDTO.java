@@ -14,6 +14,4 @@ import lombok.experimental.SuperBuilder;
 public class AssociadoCompletoDTO extends AssociadoBasicoDTO {
 
     private Long id;
-
-    private boolean excluido;
 }

@@ -9,14 +9,16 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
-public class VotoId {
+public class VotoId implements Serializable {
 
+    private static final long serialVersionUID = 7458375455961893081L;
     @NotNull(message = "Campo obrigatório.")
     @JoinColumn(name = "FK_ASSOCIADO")
     @ManyToOne
