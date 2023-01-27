@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a4eb12a-b4ad-4645-b4d6-7a6b159456fd" name="Changes" comment="feat: Correção dos serviços do associado">
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/PautaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/exceptions/EntidadeNaoProcessavelException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/PautaMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/repositorio/PautaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaServiceImpl.java" afterDir="false" />
+    <list default="true" id="5a4eb12a-b4ad-4645-b4d6-7a6b159456fd" name="Changes" comment="feat: Criação do controler e service das Pautas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/AssociadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/AssociadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Pauta.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Pauta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta$PautaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta$PautaBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/AssociadoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/AssociadoMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/PautaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/PautaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +96,30 @@
       <option name="project" value="LOCAL" />
       <updated>1674759813642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Criação do controler e service das Pautas">
+      <created>1674764672428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674764672428</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Correção dos serviços do associado" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Correção dos serviços do associado" />
+    <MESSAGE value="feat: Criação do controler e service das Pautas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Criação do controler e service das Pautas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/AssociadoController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

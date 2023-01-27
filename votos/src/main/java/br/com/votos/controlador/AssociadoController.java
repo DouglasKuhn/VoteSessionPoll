@@ -59,7 +59,7 @@ public class AssociadoController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable(value = "ID") Long id) {
+    public ResponseEntity<Void> excluir (@RequestParam(value = "ID") Long id) {
         associadoService.excluir(id);
         return ResponseEntity.noContent().build();
     }
