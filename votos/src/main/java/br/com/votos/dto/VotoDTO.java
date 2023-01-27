@@ -1,5 +1,6 @@
 package br.com.votos.dto;
 
+import br.com.votos.entidade.enums.VotoEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,5 @@ public class VotoDTO {
     private Long idPauta;
 
     @NotNull(message = "O campo voto é obrigatório.")
-    private String voto;
+    private VotoEnum voto;
 }

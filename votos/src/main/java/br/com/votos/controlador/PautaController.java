@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,8 +27,8 @@ public class PautaController {
 
     @PostMapping
     public ResponseEntity<Void> criar (@RequestParam(value = "Descrição da Pauta") String descricao,
-                                      @RequestParam(value = "Tempo de duração em Minutos") Long time) {
-        Pauta pauta = this.pautaService.criar(descricao, time);
+                                      @RequestParam(value = "Tempo de duração em Minutos") Optional<Long> time) {
+        Pauta pauta = this.pautaService.criar(descricao, time.get());
         if (pauta != null) {
             return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest().queryParam("id", pauta.getId().toString()).build().toUri()).build();
         } else {

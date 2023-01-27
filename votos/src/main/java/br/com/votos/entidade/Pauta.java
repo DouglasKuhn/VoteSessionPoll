@@ -30,11 +30,11 @@ public class Pauta {
 
     @NotNull(message = "Campo Obrigatório.")
     @Column(name = "INICIO", nullable = false)
-    private LocalDateTime dtInicio;
+    private LocalDateTime dataInicio;
 
     @NotNull(message = "Campo Obrigatório.")
     @Column(name = "FIM", nullable = false)
-    private LocalDateTime dtFim;
+    private LocalDateTime dataFim;
 
     @NotNull(message = "Campo Obrigatório.")
     @Column(name = "FINALIZADA", nullable = false)

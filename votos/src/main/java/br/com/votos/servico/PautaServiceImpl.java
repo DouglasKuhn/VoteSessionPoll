@@ -35,9 +35,9 @@ public class PautaServiceImpl implements PautaService {
     public Pauta criar(String descricao, Long time) {
         Pauta pauta = new Pauta(null, descricao, LocalDateTime.now(), null, false);
         if (time != null && time > 0) {
-            pauta.setDtFim(pauta.getDtInicio().plusMinutes(time));
+            pauta.setDataFim(pauta.getDataInicio().plusMinutes(time));
         } else {
-            pauta.setDtFim(pauta.getDtInicio().plusMinutes(1));
+            pauta.setDataFim(pauta.getDataInicio().plusMinutes(1));
         }
         log.info("Pauta criada: {}", pauta);
         return this.pautaRepository.save(pauta);
