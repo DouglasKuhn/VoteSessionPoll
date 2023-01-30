@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/VoteSessionPoll.iml" filepath="$PROJECT_DIR$/.idea/VoteSessionPoll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/votos/votos.iml" filepath="$PROJECT_DIR$/votos/votos.iml" />
+    </modules>
+  </component>
+</project>
