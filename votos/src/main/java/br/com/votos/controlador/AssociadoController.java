@@ -37,7 +37,7 @@ public class AssociadoController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Void> alterar (@PathVariable(value = "ID") Long id,
+    public ResponseEntity<Void> alterar (@PathVariable(value = "id") Long id,
                                          @Valid @RequestBody AssociadoBasicoDTO associadoBasicoDTO) {
         Associado associado = this.associadoService.alterar(id, this.associadoMapper.toAssociado(associadoBasicoDTO));
         if (associado != null) {

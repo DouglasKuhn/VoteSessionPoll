@@ -4,68 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a4eb12a-b4ad-4645-b4d6-7a6b159456fd" name="Changes" comment="feat: Algumas correções dos controladores">
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/VotacaoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/VotacaoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/repositorio/VotacaoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/VotacaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/VotacaoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/AssociadoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/PautaController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/VotacaoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoBasicoDTO$AssociadoBasicoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoBasicoDTO$AssociadoBasicoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoBasicoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoCompletoDTO$AssociadoCompletoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoCompletoDTO$AssociadoCompletoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/AssociadoCompletoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaBasicoDTO$PautaBasicoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaBasicoDTO$PautaBasicoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaBasicoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaCompletoDTO$PautaCompletoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaCompletoDTO$PautaCompletoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/PautaCompletoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/UsuarioDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoDTO$VotacaoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoDTO$VotacaoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoResultadoDTO$VotacaoResultadoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoResultadoDTO$VotacaoResultadoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotacaoResultadoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotoDTO$VotoDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotoDTO$VotoDTOBuilderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/VotoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/dto/enums/VotoEnumDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/exceptions/EntidadeNaoProcessavelException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/exceptions/ObjetoNaoEncontradoException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapperImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapperImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/repositorio/AssociadoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/repositorio/PautaRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/repositorio/VotacaoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/VotacaoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/VotacaoServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/classes/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/PautaMapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/VotacaoMapperImpl.java" afterDir="false" />
+    <list default="true" id="5a4eb12a-b4ad-4645-b4d6-7a6b159456fd" name="Changes" comment="feat: Criação do Controller e Service dos votos">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/scheduler/VotacaoScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/test/java/br/com/votos/servico/AssociadoServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/test/java/br/com/votos/servico/PautaServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/votos/src/test/java/br/com/votos/servico/VotacaoServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/Text" beforeDir="false" afterPath="$PROJECT_DIR$/votos/Text" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/votos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/AssociadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/AssociadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/PautaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/controlador/PautaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/VotoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/dto/VotoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Pauta.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Pauta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/entidade/Associado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/exceptions/ObjetoNaoEncontradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/exceptions/ObjetoNaoEncontradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/AssociadoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/AssociadoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/PautaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/PautaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/VotacaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/VotacaoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/repositorio/AssociadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/repositorio/AssociadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/AssociadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/AssociadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/AssociadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/AssociadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/PautaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/VotacaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/servico/VotacaoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/src/test/java/br/com/votos/VotosApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/test/java/br/com/votos/VotosApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/votos/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/AssociadoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/AssociadoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/PautaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/controlador/PautaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Associado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta$PautaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta$PautaBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/entidade/Pauta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/exceptions/ObjetoNaoEncontradoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/exceptions/ObjetoNaoEncontradoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/AssociadoMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/PautaMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/mapper/VotacaoMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/repositorio/AssociadoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/repositorio/AssociadoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/AssociadoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/PautaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/VotacaoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/votos/target/classes/br/com/votos/servico/VotacaoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/AssociadoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/AssociadoMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/PautaMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/PautaMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/target/generated-sources/annotations/br/com/votos/mapper/VotacaoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/votos/src/main/java/br/com/votos/mapper/VotacaoMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votos/votos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/votos/votos.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +107,76 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dougl/Downloads/Nova pasta (2)/votostst&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="VotosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.votos.VotosApplication" />
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.votos.mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.br.com.votos in votos">
+    <configuration name="VotacaoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="votos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.votos.servico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.votos.servico" />
+      <option name="MAIN_CLASS_NAME" value="br.com.votos.servico.VotacaoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VotacaoServiceTest.deveConsultarVotacoesComSucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="votos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.votos.servico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.votos.servico" />
+      <option name="MAIN_CLASS_NAME" value="br.com.votos.servico.VotacaoServiceTest" />
+      <option name="METHOD_NAME" value="deveConsultarVotacoesComSucesso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VotacaoServiceTest.deveFalharQuandoVotarUtilizandoIdDoAssociadoInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="votos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.votos.servico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.votos.servico" />
+      <option name="MAIN_CLASS_NAME" value="br.com.votos.servico.VotacaoServiceTest" />
+      <option name="METHOD_NAME" value="deveFalharQuandoVotarUtilizandoIdDoAssociadoInexistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VotacaoServiceTest.deveVotarComSucesso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="votos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.votos.servico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.votos.servico" />
+      <option name="MAIN_CLASS_NAME" value="br.com.votos.servico.VotacaoServiceTest" />
+      <option name="METHOD_NAME" value="deveVotarComSucesso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.votos in votos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="votos" />
       <extension name="coverage">
         <pattern>
@@ -127,13 +184,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="br.com.votos" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VotosApplication" />
+        <item itemvalue="JUnit.br.com.votos in votos" />
+        <item itemvalue="JUnit.VotacaoServiceTest" />
+        <item itemvalue="JUnit.VotacaoServiceTest.deveVotarComSucesso" />
+        <item itemvalue="JUnit.VotacaoServiceTest.deveConsultarVotacoesComSucesso" />
+        <item itemvalue="JUnit.VotacaoServiceTest.deveFalharQuandoVotarUtilizandoIdDoAssociadoInexistente" />
       </list>
     </recent_temporary>
   </component>
@@ -167,13 +230,39 @@
       <option name="project" value="LOCAL" />
       <updated>1674825262825</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: Criação do Controller e Service dos votos">
+      <created>1674850638212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674850638212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Correção dos serviços do associado" />
     <MESSAGE value="feat: Criação do controler e service das Pautas" />
     <MESSAGE value="feat: Algumas correções dos controladores" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Algumas correções dos controladores" />
+    <MESSAGE value="feat: Criação do Controller e Service dos votos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Criação do Controller e Service dos votos" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="associadoAlterado.cpf" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

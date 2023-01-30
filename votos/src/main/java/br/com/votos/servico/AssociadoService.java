@@ -12,7 +12,7 @@ public interface AssociadoService {
 
     List<Associado> consultar(Optional<String> id, Optional<String> nome);
 
-    Optional<Associado> consultarPorId (Long id);
+    Associado consultarPorId (Long id);
 
     void excluir (Long id);
 }

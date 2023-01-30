@@ -6,10 +6,10 @@ import br.com.votos.entidade.Votacao;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
 public interface VotacaoMapper {
 
     @Mapping(source = "idAssociado", target = "votoId.associado.id")
@@ -19,8 +19,8 @@ public interface VotacaoMapper {
     @Mapping(source = "votoId.associado.nome", target = "associado.nome")
     @Mapping(source = "votoId.associado.cpf", target = "associado.cpf")
     @Mapping(source = "votoId.pauta.descricao", target = "pauta.descricao")
-    @Mapping(source = "votoId.pauta.dtInicio", target = "pauta.dataInicio")
-    @Mapping(source = "votoId.pauta.dtFim", target = "pauta.dataFim")
+    @Mapping(source = "votoId.pauta.dataInicio", target = "pauta.dataInicio")
+    @Mapping(source = "votoId.pauta.dataFim", target = "pauta.dataFim")
     VotacaoDTO toVotacaoDto(Votacao votacao);
 
     @IterableMapping(elementTargetType = VotacaoDTO.class)

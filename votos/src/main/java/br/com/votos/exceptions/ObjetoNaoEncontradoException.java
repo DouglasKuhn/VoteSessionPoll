@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ObjetoNaoEncontradoException extends RuntimeException {
 
     public ObjetoNaoEncontradoException() {
-        super("Objeto informado não foi encontrado.");
+        super("Objeto não encontrado.");
     }
 }

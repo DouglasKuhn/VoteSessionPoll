@@ -8,10 +8,11 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
 public interface PautaMapper {
 
     Pauta toPauta(PautaBasicoDTO pautaDto);
 
     List<PautaCompletoDTO> toPautaCompletoDtoList(List<Pauta> pautas);
+
+    PautaCompletoDTO toPautaCompletoDto(Pauta pauta);
 }

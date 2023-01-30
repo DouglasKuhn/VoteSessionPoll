@@ -1,14 +1,14 @@
 package br.com.votos.servico;
 
+import br.com.votos.dto.UsuarioDTO;
 import br.com.votos.entidade.Associado;
 import br.com.votos.entidade.Pauta;
 import br.com.votos.entidade.Votacao;
 import br.com.votos.entidade.VotoId;
-import br.com.votos.entidade.enums.VotoEnum;
+import br.com.votos.entidade.enums.CpfStatusEnum;
 import br.com.votos.exceptions.EntidadeNaoProcessavelException;
 import br.com.votos.repositorio.VotacaoRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -71,26 +71,26 @@ public class VotacaoServiceImpl implements VotacaoService{
     private void validarVotoJaRealizado(Long idPauta, Long idAssociado) {
         Optional<Votacao> votacaoBaseDeDadosOptional = votacaoRepository.findByVotoIdPautaIdAndVotoIdAssociadoId(idPauta, idAssociado);
         if (votacaoBaseDeDadosOptional.isPresent()) {
-            log.warn("O associado já realizou seu voto. idPauta: {}, idAssociado: {}", idPauta, idAssociado);
-            throw new EntidadeNaoProcessavelException("O associado já realizou seu voto.");
+            log.warn("Voto ja realizado. idPauta: {}, idAssociado: {}", idPauta, idAssociado);
+            throw new EntidadeNaoProcessavelException("Voto ja realizado.");
         }
     }
 
     private Associado buscarAssociado(Votacao votacao) {
         if (!ObjectUtils.isEmpty(votacao) && !ObjectUtils.isEmpty(votacao.getVotoId())
                 && !ObjectUtils.isEmpty(votacao.getVotoId().getAssociado())) {
-            Optional<Associado> associadoOptional = associadoService
+            Associado associadoOptional = associadoService
                     .consultarPorId(votacao.getVotoId().getAssociado().getId());
-            if (associadoOptional.isPresent()) {
-                Associado associado = associadoOptional.get();
+            if (associadoOptional != null) {
+                Associado associado = associadoOptional;
                 return associado;
             } else {
-                log.warn("O associado não foi encontrado ou processado. idAssociado: {}", votacao.getVotoId().getAssociado().getId());
-                throw new EntidadeNaoProcessavelException("O associado não foi encontrado ou processado.");
+                log.warn("Associado não encontrado. idAssociado: {}", votacao.getVotoId().getAssociado().getId());
+                throw new EntidadeNaoProcessavelException("Associado não encontrado.");
             }
         } else {
-            log.warn("O associado não foi encontrado ou processado. votacao: {}", votacao);
-            throw new EntidadeNaoProcessavelException("O associado não foi encontrado ou processado.");
+            log.warn("Associado não encontrado. votacao: {}", votacao);
+            throw new EntidadeNaoProcessavelException("Associado não encontrado.");
         }
     }
 
@@ -101,13 +101,14 @@ public class VotacaoServiceImpl implements VotacaoService{
             if (pautaOptional.isPresent()) {
                 return pautaOptional.get();
             } else {
-                log.warn("A pauta não foi encontrada ou processada. idPauta: {}", votacao.getVotoId().getPauta().getId());
-                throw new EntidadeNaoProcessavelException("A pauta não foi encontrada ou processada.");
+                log.warn("Pauta não encontrada. idPauta: {}", votacao.getVotoId().getPauta().getId());
+                throw new EntidadeNaoProcessavelException("Pauta não encontrada.");
             }
         } else {
-            log.warn("A pauta não foi encontrada ou processada. votacao: {}", votacao);
-            throw new EntidadeNaoProcessavelException("A pauta não foi encontrada ou processada.");
+            log.warn("Pauta não encontrada. votacao: {}", votacao);
+            throw new EntidadeNaoProcessavelException("Pauta não encontrada.");
         }
     }
+
 
 }

@@ -1,9 +1,11 @@
 package br.com.votos.servico;
 
 import br.com.votos.entidade.Associado;
+import br.com.votos.exceptions.EntidadeNaoProcessavelException;
 import br.com.votos.exceptions.ObjetoNaoEncontradoException;
 import br.com.votos.repositorio.AssociadoRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,7 @@ public class AssociadoServiceImpl implements AssociadoService{
         Associado associado = new Associado();
         associado.setNome(nome);
         associado.setCpf(cpf);
+        validarDadoDoCpfAoCriar(associado);
         log.info("Associado criado: {}", associado);
         return this.associadoRepository.save(associado);
     }
@@ -40,10 +43,11 @@ public class AssociadoServiceImpl implements AssociadoService{
         log.debug("idAssociado: {}, associadoAlterado: {}", id, associadoAlterado);
         Optional<Associado> associadoDoBDOptional = this.associadoRepository.findById(id);
         if (associadoDoBDOptional.isPresent()) {
-            Associado associado = associadoDoBDOptional.get();
-            associadoAlterado.setId(id);
-            log.info("Associado da base de dados: {}", associado);
+            validarDadoDoCpfNaAlteracao(associadoDoBDOptional.get(), associadoAlterado);
+            BeanUtils.copyProperties(associadoAlterado, associadoDoBDOptional, "id");
+            log.info("Associado da base de dados: {}", associadoDoBDOptional.get());
             log.info("Associado alterado: {}", associadoAlterado);
+            associadoAlterado.setId(id);
             return this.associadoRepository.save(associadoAlterado);
         } else {
             log.warn("Objeto informado não foi encontrado. idAssociado: {}", id);
@@ -73,22 +77,32 @@ public class AssociadoServiceImpl implements AssociadoService{
     }
 
     @Override
-    public Optional<Associado> consultarPorId (Long id) {
-        log.debug("idAssociado: {}", id);
-        return this.associadoRepository.findById(id);
+    public Associado consultarPorId (Long id) {
+        Optional<Associado> obj = associadoRepository.findById(id);
+        return obj.orElseThrow(() -> new ObjetoNaoEncontradoException());
     }
 
     @Override
     public void excluir (Long id) {
-        log.debug("idAssociado: {}", id);
-        Optional<Associado> associadoOptional = this.associadoRepository.findById(id);
-        if (associadoOptional.isPresent()) {
-            Associado associado = associadoOptional.get();
-            log.info("Associado excluído: {}", associado);
-            this.associadoRepository.delete(associado);
-        } else {
-            log.warn("Objeto informado não foi encontrado. idAssociado: {}", id);
-            throw new ObjetoNaoEncontradoException();
+        consultarPorId(id);
+        this.associadoRepository.deleteById(id);
+    }
+
+    private void validarDadoDoCpfAoCriar(Associado associado) {
+        Associado associadoCpf = this.associadoRepository.findByCpf(associado.getCpf());
+        if (associadoCpf != null) {
+            log.warn("CPF já existente na Base de Dados. AssociadoCriado: {}", associado);
+            throw new EntidadeNaoProcessavelException("CPF já existente na Base de Dados.");
+        }
+    }
+
+    private void validarDadoDoCpfNaAlteracao(Associado associadoDoBD, Associado associadoAlterado) {
+        if (!associadoDoBD.getCpf().equalsIgnoreCase(associadoAlterado.getCpf())) {
+            Associado associadoCpf = this.associadoRepository.findByCpf(associadoAlterado.getCpf());
+            if (associadoCpf != null && !associadoCpf.getId().equals(associadoDoBD.getId())) {
+                log.warn("CPF já existente na Base de Dados. AssociadoAlterado: {}", associadoAlterado);
+                throw new EntidadeNaoProcessavelException("CPF já existente na Base de Dados.");
+            }
         }
     }
 }

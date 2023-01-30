@@ -37,7 +37,7 @@ public class PautaController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Void> alterar (@PathVariable(value = "ID") Long id,
+    public ResponseEntity<Void> alterar (@PathVariable(value = "id") Long id,
                                         @Valid @RequestBody PautaBasicoDTO pautaDto) {
         Pauta pauta = this.pautaService.alterar(id, this.pautaMapper.toPauta(pautaDto));
         if (pauta != null) {

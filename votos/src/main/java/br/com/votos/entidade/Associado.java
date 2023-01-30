@@ -29,6 +29,6 @@ public class Associado {
 
     @NotNull(message = "Campo Obrigatório.")
     @NotBlank(message = "Campo Obrigatório.")
-    @Column(name = "CPF", nullable = false, unique = true)
+    @Column(name = "CPF", nullable = false)
     private String cpf;
 }

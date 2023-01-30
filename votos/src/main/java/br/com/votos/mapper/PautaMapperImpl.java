@@ -2,17 +2,13 @@ package br.com.votos.mapper;
 
 import br.com.votos.dto.PautaBasicoDTO;
 import br.com.votos.dto.PautaCompletoDTO;
+import br.com.votos.dto.PautaCompletoDTO.PautaCompletoDTOBuilder;
 import br.com.votos.entidade.Pauta;
-import java.util.ArrayList;
-import java.util.List;
-import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
-@Generated(
-    value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-27T14:17:37-0300",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Amazon.com Inc.)"
-)
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class PautaMapperImpl implements PautaMapper {
 
@@ -43,6 +39,22 @@ public class PautaMapperImpl implements PautaMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public PautaCompletoDTO toPautaCompletoDto(Pauta pauta) {
+        if ( pauta == null ) {
+            return null;
+        }
+
+        PautaCompletoDTOBuilder<?, ?> pautaCompletoDTO = PautaCompletoDTO.builder();
+
+        pautaCompletoDTO.descricao( pauta.getDescricao() );
+        pautaCompletoDTO.dataInicio( pauta.getDataInicio() );
+        pautaCompletoDTO.dataFim( pauta.getDataFim() );
+        pautaCompletoDTO.id( pauta.getId() );
+
+        return pautaCompletoDTO.build();
     }
 
     protected PautaCompletoDTO pautaToPautaCompletoDTO(Pauta pauta) {

@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -21,15 +20,14 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class PautaServiceImpl implements PautaService {
 
     @Autowired
-    private final EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Autowired
-    private final PautaRepository pautaRepository;
+    private PautaRepository pautaRepository;
 
     @Override
     public Pauta criar(String descricao, Long time) {
@@ -55,7 +53,7 @@ public class PautaServiceImpl implements PautaService {
             log.info("Pauta alterada: {}", pautaAlterada);
             return this.pautaRepository.save(pautaAlterada);
         } else {
-            log.warn("Objeto informado não foi encontrado. idPauta: {}", id);
+            log.warn("Pauta não foi encontrada. idPauta: {}", id);
             throw new ObjetoNaoEncontradoException();
         }
     }
@@ -88,7 +86,7 @@ public class PautaServiceImpl implements PautaService {
     }
 
     @Override
-    public List<Pauta> consultarAsNaoFinalizadas() {
+    public List<Pauta> consultarPautasNaoFinalizadas() {
         return pautaRepository.findByFinalizadaFalse();
     }
 
@@ -101,15 +99,15 @@ public class PautaServiceImpl implements PautaService {
             log.info("Pauta excluída: {}", pauta);
             this.pautaRepository.delete(pauta);
         } else {
-            log.warn("Objeto informado não foi encontrado. idPauta: {}", id);
+            log.warn("Pauta não encontrada. idPauta: {}", id);
             throw new ObjetoNaoEncontradoException();
         }
     }
 
     private void validarSePautaFoiFinalizada(Pauta pauta) {
         if (pauta.isFinalizada()) {
-            log.warn("A pauta já foi finalizada. Pauta: {}", pauta);
-            throw new EntidadeNaoProcessavelException("A pauta já foi finalizada.");
+            log.warn("Pauta já finalizada. Pauta: {}", pauta);
+            throw new EntidadeNaoProcessavelException("Pauta já finalizada.");
         }
     }
 }

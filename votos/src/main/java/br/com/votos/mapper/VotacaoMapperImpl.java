@@ -10,17 +10,12 @@ import br.com.votos.entidade.Pauta;
 import br.com.votos.entidade.Votacao;
 import br.com.votos.entidade.VotoId;
 import br.com.votos.entidade.enums.VotoEnum;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.processing.Generated;
-import org.springframework.stereotype.Component;
 
-@Generated(
-    value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-27T14:11:21-0300",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Amazon.com Inc.)"
-)
 @Component
 public class VotacaoMapperImpl implements VotacaoMapper {
 
@@ -170,7 +165,7 @@ public class VotacaoMapperImpl implements VotacaoMapper {
         if ( pauta == null ) {
             return null;
         }
-        LocalDateTime dtInicio = pauta.getDtInicio();
+        LocalDateTime dtInicio = pauta.getDataInicio();
         if ( dtInicio == null ) {
             return null;
         }
@@ -185,7 +180,7 @@ public class VotacaoMapperImpl implements VotacaoMapper {
         if ( pauta == null ) {
             return null;
         }
-        LocalDateTime dtFim = pauta.getDtFim();
+        LocalDateTime dtFim = pauta.getDataFim();
         if ( dtFim == null ) {
             return null;
         }
